@@ -140,6 +140,7 @@ body {
 .container {
     padding: 0 1em;
     margin: 0 auto;
+    /* overflow-x: hidden; */
 }
 
 /* FOR MID-SIZED SCREENS/TABLETS (and Larger) */
@@ -158,18 +159,60 @@ body {
     .container { max-width: 1200px; }
 }
 
+/* GRID SYSTEM */
+
+.column {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+@media (min-width: 768px) {
+    .row {
+        display: flex;
+        margin-left: -1%;
+        margin-left: -1%;
+    }
+    .column {
+        flex-grow: 0;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    .one-whole { width: 100%; }
+    .one-half { width: 48%; }
+    .one-third { width: 31.3333%; }
+    .push-one-third { margin-left: 34.3333%; }
+    .two-thirds { width: 64.6666%; }
+    .one-fourth { width: 23%; }
+    .push-one-fourth { margin-left: 26%; }
+
+    .row.centered {
+        justify-content: center;
+    }
+
+    .column.centered {
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 
-/* ------------------------ */
-/* ------------------------ */
-/* ------------------------ */
-/* ------------------------ */
-/* ------------------------ */
-/* ------------------------ */
+}
 
+/* ------------------------ */
+/* ------------------------ */
+/* ------------------------ */
 
 
 /* FOR LAYOUT DEMO PURPOSES ONLY */
+
+.demo .column {
+    background: rgba(0,0,0,.2);
+    padding: .5em;
+    text-align: center;
+}
+
+.demo .column p {
+    max-width: none;
+}
 
 /* FOR SMALL-SIZED SCREENS (and Larger) */
 body.demo::before {
@@ -205,3 +248,10 @@ body.demo::before {
         background: purple; 
     }
 }
+
+/* FOR TESTING ONLY */
+/* * {
+    background: rgba(255,0,0,.2);
+    color: rgba(255,0,0,.2);
+    box-shadow: 0 0 1px 1px inset rgba(255,0,0,.5);
+} */
