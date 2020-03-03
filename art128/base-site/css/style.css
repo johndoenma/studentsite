@@ -23,8 +23,8 @@ CSS TABLE OF CONTENTS
 # SITE STRUCTURE
     # SITE HEADER
         # SITE ID
-    # SITE MAIN
     # SITE FOOTER
+    # SITE MAIN
     # SITE NAVIGATION
         # TOGGLE NAV
     # SECTIONS
@@ -90,6 +90,12 @@ a {
 a:hover {
     color: rgba(0, 0, 51, 1);
     text-decoration: underline;
+}
+
+/* MEDIA */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* BUTTONS */
@@ -205,14 +211,21 @@ body {
     }
 }
 
-
-.site-header a {
+.site-header a,
+.site-footer a {
     color: rgba(0,0,0,.8);
     text-decoration: none;
 }
-.site-header a:hover {
+.site-header a:hover,
+.site-footer a:hover {
     color: rgba(0,0,0,1);
 }
+
+/* SITE FOOTER */
+.site-footer {
+    padding: 1em .5em 2em .5em;
+}
+
 
 /* SITE ID (LOGO) */
 .site-id h1 {
@@ -230,6 +243,7 @@ body {
 .site-nav ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
 }
@@ -248,10 +262,28 @@ body {
 
 }
 
-/* SITE FOOTER */
-.site-footer {
-
+/* SECTIONS */
+section {
+    padding: 4em 0;
 }
+
+.hero {
+    text-align: center;
+    background-color: rgba(204,204,204,1);
+    padding: 6em 1em;
+}
+
+.hero h2 {
+    font-size: 3em;
+    line-height: 1;
+}
+
+.hero p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 
 
 
