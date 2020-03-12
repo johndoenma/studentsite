@@ -295,6 +295,7 @@ body {
     .toggle-nav .site-nav ul {
         position: absolute;
         left: -9999px;
+        margin-top: 1em;
     }
 
     /* SHOW NAV ON SMALL SCREENS WHEN EXPANDED CLASS IS TOGGLED */
@@ -302,7 +303,6 @@ body {
         position: static;
         left: auto;
         display: block;
-        margin-top: 1em;
     }
     .toggle-nav.expanded .site-nav a {
         background: rgba(0, 51, 102, 1);
@@ -314,6 +314,17 @@ body {
     .toggle-nav.expanded .site-nav a:hover {
         background: rgba(0, 0, 51, 1);
     }
+
+    /* ANIMATING THE TOGGLE NAV */
+    .toggle-nav .site-nav ul {
+        transition: all 1s ease;
+        max-height: 0;
+    }
+
+    .toggle-nav.expanded .site-nav ul  {
+        max-height: 400px;
+    }
+
 }
 
 /* NAVICON */
