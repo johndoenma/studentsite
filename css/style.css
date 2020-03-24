@@ -17,6 +17,7 @@ body {
 }
 p { max-width: 35em; }
 a { text-decoration: none; }
+h1, h2, h3 { font-weight: normal;}
 
 /* LAYOUT */
 body {
