@@ -355,7 +355,7 @@ section {
     min-height: 100vh;
     display: grid;
     place-items: center;
-    margin: 5vh;
+    margin: 10vh;
     min-height: 90vh;
 }
 
