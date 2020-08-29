@@ -26,6 +26,12 @@ body {
     grid-template-rows: auto 1fr;
 }
 
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 0 1em;
+}
+
 /* SITE STRUCTURE */
 .site-header {
     display: flex;
@@ -57,6 +63,27 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/* TWO COLUMN LISTS  */
+.list-two-col {
+    display: flex;
+    flex-wrap: wrap;
+}
+.list-two-col ul {
+    margin-bottom: 1em;
+}
+.list-two-col ul ul {
+    margin-bottom: 0;
+}
+.list-two-col li {
+    padding-right: 2em;
+}
+
+/* ASSIGNMENT LISTS */
+.list-assignments li li {
+    color: rgba(255,255,255,.4);
+}
+
 
 /* FOR TESTING ONLY */
 
