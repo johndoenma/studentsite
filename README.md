@@ -1,4 +1,4 @@
-# John Doe's Student Site 2021
+# John Doe's Student Site
 
 This is my student website created for my NMA courses
 
