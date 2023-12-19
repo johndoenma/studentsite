@@ -1,0 +1,18 @@
+/* BUTTONS */
+
+.button {
+    display: inline-block;
+    background-color: $color-link;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 2em;
+    margin: 1em .5em 1em 0;
+
+    &:hover {
+        background-color: transparent;
+        color: $color-link;
+        border: 2px solid $color-link;
+    }
+
+}
