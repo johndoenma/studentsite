@@ -1,0 +1,488 @@
+/* GLOBAL RESET */
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+/* GLOBAL COLORS */
+body { color: rgba(0, 0, 0, 0.8); }
+a { color: rgba(51, 102, 102, 1); }
+a:hover { color: rgba(51, 51, 0, 1); }
+
+/* GLOBAL TYPOGRAPHY */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    /* font-size: 88.75%; 14px */
+    line-height: 1.4;
+}
+
+/* GLOBAL MEDIA */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* TRADITIONAL TYPOGRAPHIC SCALE */
+h1 {
+    font-size: 3em;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 2.25em;
+    line-height: 1.1;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+h4 {
+    font-size: 1.2em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+p {
+    max-width: 35em;
+}
+li {
+    list-style: none;
+}
+.meta {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    color: ccc;
+}
+div {
+break-inside: avoid;
+}
+
+/* SITE STRUCTURE */
+
+header {
+    background-color: rgba(51, 102, 102, 1);
+    color: rgba(0, 0, 0, 0.8); 
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+header a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+
+/* SITE ID */
+.site-id h1 {
+    margin: 0;
+}
+
+/* SITE NAV */
+.site-nav ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav  a {
+    display: block;
+    padding: 1em;
+}
+
+/* ADD PULL DOWNS */
+
+.site-nav ul li {
+    position: relative;
+}
+.site-nav ul li ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    display: block;
+}
+.site-nav ul li:hover ul {
+    height: auto;
+    overflow: visible;
+    padding-top: 3em;
+}
+.site-nav ul li ul li {
+    min-width: 100px;
+}
+
+/* MAIN */
+main {
+    background: rgba(0,0,0,.05);
+    padding-bottom: 6em;
+}
+
+/* HERO SECTION */
+.hero {
+    background-color: rgba(51, 102, 102, 1);
+    text-align: center;
+    color: white;
+    padding: 6em 1em;
+}
+
+.hero h1,
+.hero h2 {
+    font-size: 6em;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+.hero p {
+    max-width: 30em;
+    margin: 1em auto;
+}
+
+/* COURSES SECTION */
+.courses {
+    padding: 6em 1em 15em 1em;
+    display: grid;
+    justify-content: center;
+}
+
+.courses ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.courses h3{
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid rgba(0,0,0,.05);
+    padding: 1em;
+}
+
+/* SOCIAL NAV */
+.social-nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.social-nav  a {
+    display: block;
+    padding: 1em;
+}
+
+/* LAYOUT */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+@media (min-width: 768px) {
+    .container {
+    padding: 0 2%;
+    }
+}
+
+section {
+    padding: 3em 1em;
+}
+
+/* SIDEBAR/ASIDE */
+aside {
+    padding: 2em 0;
+}
+
+@media (min-width: 768px) {
+    .two-col-sidebar {
+        display: grid;
+        grid-template-columns: 20em auto;
+    }
+    .two-col-sidebar aside {
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        margin: 0 3em 2em 0;
+        padding: .3em 2em 0 0;
+    }
+}
+
+/* HOME PAGE ONLY */
+.page-home footer {
+    margin-bottom: 15em;
+}
+
+/* SUB PAGES */
+.page-sub .hero {
+    background-color:rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* COURSE PAGES WITH MULTIPLE LISTS */
+.coursework {
+    padding: 3em 1em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project {
+    margin: 2em;
+}
+
+/* CODE BLOCKS */
+
+pre code {
+    width: 100%;
+    display: block;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 1em 3em;
+    margin-bottom: 1em;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+.markup-box {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 1em 3em;
+    margin-bottom: 1em;
+}
+
+/* DEFINITION LISTS */
+dt {
+    font-weight: bold;
+    margin-top: 1em;
+}
+dd {
+    margin: 0;
+}
+
+/* HELPERS */
+.comingsoon {
+    text-decoration: none;
+    color: #888;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+/* CARDS */
+
+.courses .cards {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 3em;
+    flex-wrap: wrap;
+    padding: 3em 0;
+    font-size: .875em;
+    line-height: 1.1;
+}
+
+.courses .cards li {
+    min-width: 30%;
+}
+.courses .cards a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    padding: 4em 2em;
+    /* margin: 1em; */
+    text-decoration: none;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .1);
+}
+.courses .cards a:hover {
+    background-color: rgba(51, 102, 102, 1);
+    color: white;
+}
+.courses .cards span {
+    display: block;
+    font-size: 3em;
+}
+
+
+
+/* PROJECTS */
+
+.projects {
+    padding: 3em 1em 9em 1em;
+}
+
+.projects-thumbgrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.projects-thumbgrid li {
+    margin: 0 0 1% 0;
+    padding: 0;
+    width: 49%;
+}
+
+.projects-thumbgrid a {
+    display: block;
+}
+
+.projects-thumbgrid img {
+    display: block;
+}
+.projects h1 {
+    font-size: 4em;
+    max-width: 12em;
+    line-height: 1.3em;
+    margin: 0;
+    padding-top: .5em;
+    hanging-punctuation: first last;
+}
+.projects h2 {
+    margin: 0;
+    padding-top: .5em;
+    max-width: 22em;
+    line-height: 1.3em;
+}
+.projects p {
+    max-width: 40em;
+}
+
+.credits li {
+    line-height: 2;
+}
+.credits h3 {
+    padding-top: 0.8em;
+}
+
+@media (min-width: 768px) {
+    .projects-thumbgrid li {
+        width: 24%;
+    }
+}
+.sectionhead {
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1em;
+}
+
+.sectionhead:after {
+    content: "";
+    border-bottom: 2px solid #ccc;
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+.challenge .row, .process .row, .solution .row {
+    align-items: center;
+}
+section.challenge, section.process, section.solution {
+    padding: 5em 0;
+}
+/* RESPONSIVE VIDEO EMBED */
+.container-iframe {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+  /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+/* SEMANTIC GRID */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -2%;
+    margin-right: -2%;
+}
+.row > * {
+    margin: 2%;
+    flex-grow: 1;
+}
+.row.centered {
+    justify-content: center;
+}
+.row.swapped {
+    flex-direction: row-reverse;
+}
+.row.stacked {
+    flex-direction: column;
+}
+.row.align-top {
+    align-items: flex-start;
+}
+@media (min-width: 768px) {
+    .row > * {
+        flex-grow: 0;
+    }
+    .row .one-whole {
+        width: 96%;
+    }
+    .row .one-half {
+        width: 46%;
+    }
+    .row .one-third {
+        width: 29.3333%;
+    }
+    .row .two-thirds {
+        width: 62.6666%;
+    }
+    .row .one-fourth {
+        width: 21%;
+    }
+    .row .three-fourths {
+        width: 71%;
+    }
+    .row .push-one-fourth {
+        margin-left: 27%;
+    }
+    .row .push-one-third {
+        margin-left: 35.3333%;
+    }
+    .row .push-one-half {
+        margin-left: 52%;
+    }
+    .row .centered {    
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* FOR DEV PURPOSES */
+/* body * {
+    background-color: rgba(0,0,0,.05) !important;
+    border: 1px solid rgba(0,0,0,.1) !important;
+    color: rgba(0,0,0,.5) !important;
+} */
+
