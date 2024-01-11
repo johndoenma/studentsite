@@ -14,6 +14,12 @@ body {
   line-height: 1.4;
 }
 
+/* GLOBAL MEDIA */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* SITE STRUCTURE */
 
@@ -55,9 +61,32 @@ header a:hover {
     padding: 1em;
 }
 
+/* ADD PULL DOWNS */
+
+.site-nav ul li {
+    position: relative;
+}
+.site-nav ul li ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    display: block;
+}
+.site-nav ul li:hover ul {
+    height: auto;
+    overflow: visible;
+    padding-top: 3em;
+}
+.site-nav ul li ul li {
+    min-width: 100px;
+}
+
 /* MAIN */
 main {
     background: rgba(0,0,0,.05);
+    padding-bottom: 6em;
 }
 
 /* HERO SECTION */
@@ -68,6 +97,7 @@ main {
     padding: 6em 1em;
 }
 
+.hero h1,
 .hero h2 {
     font-size: 6em;
     line-height: 1;
@@ -82,7 +112,7 @@ main {
 
 /* COURSES SECTION */
 .courses {
-    padding: 6em 1em;
+    padding: 6em 1em 15em 1em;
     display: grid;
     justify-content: center;
 }
@@ -142,6 +172,11 @@ aside {
         margin: 0 3em 2em 0;
         padding: .3em 2em 0 0;
     }
+}
+
+/* HOME PAGE ONLY */
+.page-home footer {
+    margin-bottom: 15em;
 }
 
 /* SUB PAGES */
@@ -238,6 +273,60 @@ dd {
     font-size: 3em;
 }
 
+
+
+/* PROJECTS */
+
+.projects {
+    padding: 3em 1em 9em 1em;
+}
+
+.projects-thumbgrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+.projects-thumbgrid li {
+    margin: 0 0 1% 0;
+    padding: 0;
+    width: 49%;
+}
+
+.projects-thumbgrid a {
+    display: block;
+}
+
+.projects-thumbgrid img {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .projects-thumbgrid li {
+        width: 24%;
+    }
+}
+
+/* RESPONSIVE VIDEO EMBED */
+.video {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    margin-bottom: 1em;
+  }
+  .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
 /* FOR DEV PURPOSES */
 /* body * {
