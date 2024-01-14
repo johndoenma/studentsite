@@ -551,13 +551,13 @@ figcaption {
 
     .overlap .textbox,
     .overlap .one-half-column:last-child {
-    background-color: #ddd;
+    background-color: #efefef;
     padding: 2em;
     margin-left: -4em;
     position: relative;
     z-index: 10;
     border-radius: 0 30px;
-    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 7px 7px 7px 0 rgba(0, 0, 0, 0.2);
     }
 
     .overlap.swap {
