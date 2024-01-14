@@ -449,6 +449,10 @@ section.challenge, section.process, section.solution {
     margin-left: -2%;
     margin-right: -2%;
 }
+.row.overlap {
+    padding-bottom: 5em;
+}
+
 @media (min-width: 782px) {
     .row {
     display: flex;
